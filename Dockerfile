@@ -23,7 +23,6 @@ RUN echo '### webes project install ###' \
 &&  rm -rf temp \
 &&  mkdir data \
 &&  cd ../
-##
 #@module ux-userfoot 標準ユーザー環境での実行後処理
 RUN echo "### ux-userfoot ###" \
 &&  echo "export LANG=ja_JP.UTF-8" >> .bashrc

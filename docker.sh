@@ -52,7 +52,8 @@ echo "### ${source} に　${holder} が割当られました ###"
   elif [[ $2 = "debug" ]]; then
     it="-it"
   fi
-  docker run ${it} -h ${project} --rm \
+  docker rm -f fx-${project}
+  docker run ${it} -h ${project} --name fx-${project} \
     -p 80:80 \
     -p 443:443 \
     -v /mnt:/mnt \
